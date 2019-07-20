@@ -56,8 +56,7 @@ void setup() {
 
   //set speed of both motors to Zero
   stop_moving();
-  
-  //ZumoMotors::setSpeeds(0,0);
+
 
   Serial.begin(57600);
   error = ps2x.config_gamepad(2, 11, 4, 5, true, true);
