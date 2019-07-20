@@ -159,7 +159,7 @@ void loop() {
   delay(20);
 }
 
-//shortened this beefy code 7-20-19
+//shortened this code 7-20-19
   // Y values = {forward: 0, center: 127, backward: 255}
   //Forward: 127->0 to 0->400
   //Fspeed = -3*(y-127)+19  ---> = 400 -3*forward
