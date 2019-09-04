@@ -1,6 +1,7 @@
 #include "ps2_functions.h"
 #include "Arduino.h"
 #include "PS2X_lib.h"
+#include "ir.h"
 
 PS2X ps2x;
 
@@ -25,20 +26,34 @@ void initPS2() {
   return error;
 }
 
-void updatePS2(int& left, int& right) {
-  ps2x.read_gamepad();
+void updatePS2(int& left, int& right, int& trig, bool hitState) {
+  int vibrate = 0;
+  bool motor = false;
+  if (hitState == true) {
+    vibrate = 255;
+    motor = true;
+  }
+  
+  ps2x.read_gamepad(motor, vibrate);
   
   // Update Button Presses
   int l2 = ps2x.ButtonPressed(PSB_L2);
   int r2 = ps2x.ButtonPressed(PSB_R2);
+  int l1 = ps2x.ButtonPressed(PSB_L1);
+  int r1 = ps2x.ButtonPressed(PSB_R1);
   int square = ps2x.ButtonPressed(PSB_PINK);
+  if (l1 == 1 || r1 == 1 || r2 == 1 || l2 == 1) {
+    trig = 1;
+  } else {
+    trig = 0;
+  }
 
   // Update Sticks
   right = mapY(ps2x.Analog(PSS_RY));
   left = mapY(ps2x.Analog(PSS_LY));
   
   
-#ifdef TEST_MODE
+#ifdef TEST_MODE_PS2
   static uint32_t last_ms = 0;
   uint32_t now_ms = millis();
   if (now_ms - last_ms >= 100) {

@@ -21,6 +21,7 @@ const bool flipMotors = true;
 
 // Run setup
 void setup() {
+  Serial.begin(9600);
 motors.flipLeftMotor(flipMotors);
 motors.flipRightMotor(flipMotors);
 }
@@ -67,4 +68,7 @@ void loop() {
 
       // Done, write the speeds to the wheels
       ZumoMotors::setSpeeds(left_speed, right_speed);
+      Serial.print(left_speed);
+      Serial.print(" | ");
+      Serial.println(right_speed);
 }

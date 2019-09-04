@@ -9,10 +9,10 @@
 #define PRESSURES   false
 #define RUMBLE      false
 
-#define TEST_MODE
+//#define TEST_MODE_PS2
 
 void initPS2();
-void updatePS2(int& left, int& right);
+void updatePS2(int& left, int& right, int& trig, bool hitState);
 int mapY(int val);
 
 #endif
