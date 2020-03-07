@@ -404,8 +404,6 @@ Wire Wire Line
 Wire Wire Line
 	2850 5500 3250 5500
 Connection ~ 2850 5500
-Wire Wire Line
-	3550 5300 3550 5100
 $Comp
 L dk_Interface-Controllers:FT231XS-U U1
 U 1 1 5E3B6CFC
@@ -959,15 +957,10 @@ F 3 "~" H 4250 5800 50  0001 C CNN
 	1    4250 5800
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:VCC #PWR?
-U 1 1 5E82B569
-P 3550 5100
-F 0 "#PWR?" H 3550 4950 50  0001 C CNN
-F 1 "VCC" H 3567 5273 50  0000 C CNN
-F 2 "" H 3550 5100 50  0001 C CNN
-F 3 "" H 3550 5100 50  0001 C CNN
-	1    3550 5100
-	1    0    0    -1  
-$EndComp
+Wire Wire Line
+	3550 5300 3550 5100
+Wire Wire Line
+	3550 5100 3650 5100
+Text GLabel 3650 5100 2    50   Input ~ 0
+VBAT
 $EndSCHEMATC

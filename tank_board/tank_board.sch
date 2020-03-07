@@ -291,17 +291,6 @@ Wire Wire Line
 Wire Wire Line
 	9100 4150 9350 4150
 $Comp
-L power:VCC #PWR?
-U 1 1 5E829323
-P 9650 4150
-F 0 "#PWR?" H 9650 4000 50  0001 C CNN
-F 1 "VCC" H 9667 4323 50  0000 C CNN
-F 2 "" H 9650 4150 50  0001 C CNN
-F 3 "" H 9650 4150 50  0001 C CNN
-	1    9650 4150
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:PWR_FLAG #FLG?
 U 1 1 5E8299C8
 P 9350 4150
@@ -326,4 +315,6 @@ F 3 "" H 8150 3450 50  0001 C CNN
 	1    8150 3450
 	1    0    0    -1  
 $EndComp
+Text GLabel 9650 4150 2    50   Input ~ 0
+VBAT
 $EndSCHEMATC
