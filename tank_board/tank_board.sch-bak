@@ -1,0 +1,329 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 2
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Sheet
+S 7950 1050 1000 1450
+U 5E2F3B90
+F0 "ESP32-WROOM" 50
+F1 "esp32wroom.sch" 50
+F2 "IO13" I L 7950 1200 50 
+F3 "IO16" B L 7950 1300 50 
+F4 "IO17" B L 7950 1400 50 
+F5 "IO18" B L 7950 1500 50 
+F6 "IO19" B L 7950 1600 50 
+F7 "IO21" B L 7950 1700 50 
+F8 "IO22" B L 7950 1800 50 
+F9 "IO23" B L 7950 1900 50 
+F10 "IO25" B L 7950 2000 50 
+F11 "IO26" B L 7950 2100 50 
+F12 "IO27" B L 7950 2200 50 
+F13 "IO32" B L 7950 2300 50 
+F14 "IO33" B R 8950 1200 50 
+F15 "IO34" I R 8950 1300 50 
+F16 "IO35" I R 8950 1400 50 
+F17 "SENSOR_VN" I R 8950 1500 50 
+F18 "SENSOR_VP" I R 8950 1600 50 
+$EndSheet
+Text Label 9350 1200 2    50   ~ 0
+IO33
+Text Label 9350 1400 2    50   ~ 0
+IO35
+Text Label 9350 1300 2    50   ~ 0
+IO34
+Wire Wire Line
+	8950 1200 9350 1200
+Wire Wire Line
+	8950 1300 9350 1300
+Wire Wire Line
+	8950 1400 9350 1400
+Wire Wire Line
+	8950 1500 9500 1500
+Wire Wire Line
+	8950 1600 9500 1600
+Wire Wire Line
+	7550 1200 7950 1200
+Wire Wire Line
+	7550 1300 7950 1300
+Wire Wire Line
+	7550 1400 7950 1400
+Wire Wire Line
+	7550 1500 7950 1500
+Wire Wire Line
+	7550 1600 7950 1600
+Wire Wire Line
+	7550 1700 7950 1700
+Wire Wire Line
+	7550 1800 7950 1800
+Wire Wire Line
+	7550 2100 7950 2100
+Wire Wire Line
+	7550 2200 7950 2200
+Wire Wire Line
+	7550 2300 7950 2300
+Text Label 9500 1500 2    50   ~ 0
+SENSOR_VN
+Text Label 9500 1600 2    50   ~ 0
+SENSOR_VP
+Text Label 7550 1200 0    50   ~ 0
+IO13
+Text Label 7550 1300 0    50   ~ 0
+IO16
+Text Label 7550 1400 0    50   ~ 0
+IO17
+Text Label 7550 1500 0    50   ~ 0
+IO18
+Text Label 7550 1600 0    50   ~ 0
+IO19
+Text Label 7550 1700 0    50   ~ 0
+IO21
+Text Label 7550 1800 0    50   ~ 0
+IO22
+Text Label 7550 2100 0    50   ~ 0
+IO26
+Text Label 7550 2200 0    50   ~ 0
+IO27
+Text Label 7550 2300 0    50   ~ 0
+IO32
+NoConn ~ 7550 1200
+NoConn ~ 7550 1300
+NoConn ~ 7550 1400
+NoConn ~ 7550 1500
+NoConn ~ 7550 1600
+NoConn ~ 7550 1700
+NoConn ~ 7550 1800
+NoConn ~ 7550 2100
+NoConn ~ 7550 2200
+NoConn ~ 7550 2300
+NoConn ~ 9350 1200
+NoConn ~ 9350 1300
+NoConn ~ 9350 1400
+NoConn ~ 9500 1500
+NoConn ~ 9500 1600
+Wire Wire Line
+	7950 1900 7550 1900
+Wire Wire Line
+	7950 2000 7550 2000
+Text Label 7550 1900 0    50   ~ 0
+IO23
+Text Label 7550 2000 0    50   ~ 0
+IO25
+NoConn ~ 7550 1900
+NoConn ~ 7550 2000
+$Comp
+L power:+BATT #PWR0101
+U 1 1 5E7EA1A4
+P 6750 3800
+F 0 "#PWR0101" H 6750 3650 50  0001 C CNN
+F 1 "+BATT" H 6765 3973 50  0000 C CNN
+F 2 "" H 6750 3800 50  0001 C CNN
+F 3 "" H 6750 3800 50  0001 C CNN
+	1    6750 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-BATT #PWR0102
+U 1 1 5E7EA590
+P 6750 3900
+F 0 "#PWR0102" H 6750 3750 50  0001 C CNN
+F 1 "-BATT" H 6765 4073 50  0000 C CNN
+F 2 "" H 6750 3900 50  0001 C CNN
+F 3 "" H 6750 3900 50  0001 C CNN
+	1    6750 3900
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6750 3800 7450 3800
+Wire Wire Line
+	6750 3900 7100 3900
+$Comp
+L power:GND #PWR0103
+U 1 1 5E7EAE27
+P 7100 3900
+F 0 "#PWR0103" H 7100 3650 50  0001 C CNN
+F 1 "GND" H 7105 3727 50  0000 C CNN
+F 2 "" H 7100 3900 50  0001 C CNN
+F 3 "" H 7100 3900 50  0001 C CNN
+	1    7100 3900
+	1    0    0    -1  
+$EndComp
+Connection ~ 7100 3900
+Wire Wire Line
+	7100 3900 7450 3900
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 5E7EB19F
+P 7450 3900
+F 0 "#FLG0102" H 7450 3975 50  0001 C CNN
+F 1 "PWR_FLAG" H 7450 4073 50  0000 C CNN
+F 2 "" H 7450 3900 50  0001 C CNN
+F 3 "~" H 7450 3900 50  0001 C CNN
+	1    7450 3900
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0103
+U 1 1 5E7EB54A
+P 7450 3800
+F 0 "#FLG0103" H 7450 3875 50  0001 C CNN
+F 1 "PWR_FLAG" H 7450 3973 50  0000 C CNN
+F 2 "" H 7450 3800 50  0001 C CNN
+F 3 "~" H 7450 3800 50  0001 C CNN
+	1    7450 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L dk_Slide-Switches:EG1218 S?
+U 1 1 5E8028F2
+P 8150 4050
+F 0 "S?" V 8104 4194 50  0000 L CNN
+F 1 "EG1218" V 8195 4194 50  0000 L CNN
+F 2 "digikey-footprints:Switch_Slide_11.6x4mm_EG1218" H 8350 4250 50  0001 L CNN
+F 3 "http://spec_sheets.e-switch.com/specs/P040040.pdf" H 8350 4350 60  0001 L CNN
+F 4 "EG1903-ND" H 8350 4450 60  0001 L CNN "Digi-Key_PN"
+F 5 "EG1218" H 8350 4550 60  0001 L CNN "MPN"
+F 6 "Switches" H 8350 4650 60  0001 L CNN "Category"
+F 7 "Slide Switches" H 8350 4750 60  0001 L CNN "Family"
+F 8 "http://spec_sheets.e-switch.com/specs/P040040.pdf" H 8350 4850 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/e-switch/EG1218/EG1903-ND/101726" H 8350 4950 60  0001 L CNN "DK_Detail_Page"
+F 10 "SWITCH SLIDE SPDT 200MA 30V" H 8350 5050 60  0001 L CNN "Description"
+F 11 "E-Switch" H 8350 5150 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 8350 5250 60  0001 L CNN "Status"
+	1    8150 4050
+	0    1    1    0   
+$EndComp
+$Comp
+L dk_Transistors-FETs-MOSFETs-Single:DMG2305UX-13 Q?
+U 1 1 5E80BDB4
+P 9100 3700
+F 0 "Q?" H 9208 3753 60  0000 L CNN
+F 1 "DMG2305UX-13" H 9208 3647 60  0000 L CNN
+F 2 "digikey-footprints:SOT-23-3" H 9300 3900 60  0001 L CNN
+F 3 "https://www.diodes.com/assets/Datasheets/DMG2305UX.pdf" H 9300 4000 60  0001 L CNN
+F 4 "DMG2305UX-13DICT-ND" H 9300 4100 60  0001 L CNN "Digi-Key_PN"
+F 5 "DMG2305UX-13" H 9300 4200 60  0001 L CNN "MPN"
+F 6 "Discrete Semiconductor Products" H 9300 4300 60  0001 L CNN "Category"
+F 7 "Transistors - FETs, MOSFETs - Single" H 9300 4400 60  0001 L CNN "Family"
+F 8 "https://www.diodes.com/assets/Datasheets/DMG2305UX.pdf" H 9300 4500 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/diodes-incorporated/DMG2305UX-13/DMG2305UX-13DICT-ND/4251589" H 9300 4600 60  0001 L CNN "DK_Detail_Page"
+F 10 "MOSFET P-CH 20V 4.2A SOT23" H 9300 4700 60  0001 L CNN "Description"
+F 11 "Diodes Incorporated" H 9300 4800 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 9300 4900 60  0001 L CNN "Status"
+	1    9100 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5E817530
+P 8150 3600
+AR Path="/5E2F3B90/5E817530" Ref="R?"  Part="1" 
+AR Path="/5E817530" Ref="R?"  Part="1" 
+F 0 "R?" V 8050 3600 50  0000 C CNN
+F 1 "100k" V 8150 3600 50  0000 C CNN
+F 2 "" V 8080 3600 50  0001 C CNN
+F 3 "~" H 8150 3600 50  0001 C CNN
+F 4 "Resistors" H 8150 3600 50  0001 C CNN "Category"
+F 5 "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF0603FT10K0/RMCF0603FT10K0CT-ND/1943057" H 8150 3600 50  0001 C CNN "DK_Detail_Page"
+F 6 "RES 100K OHM 1% 1/10W 0603" H 8150 3600 50  0001 C CNN "Description"
+F 7 "RMCF0603FT100KCT-ND" H 8150 3600 50  0001 C CNN "Digi-Key_PN"
+F 8 "Chip Resistor - Surface Mount" H 8150 3600 50  0001 C CNN "Family"
+F 9 "RMCF0603FT100K" H 8150 3600 50  0001 C CNN "MPN"
+F 10 "Stackpole Electronics Inc" H 8150 3600 50  0001 C CNN "Manufacturer"
+F 11 "Active" H 8150 3600 50  0001 C CNN "Status"
+	1    8150 3600
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8150 3750 8150 3800
+$Comp
+L power:+BATT #PWR?
+U 1 1 5E826036
+P 8050 4250
+F 0 "#PWR?" H 8050 4100 50  0001 C CNN
+F 1 "+BATT" H 8065 4423 50  0000 C CNN
+F 2 "" H 8050 4250 50  0001 C CNN
+F 3 "" H 8050 4250 50  0001 C CNN
+	1    8050 4250
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E8264A9
+P 8250 4250
+F 0 "#PWR?" H 8250 4000 50  0001 C CNN
+F 1 "GND" H 8255 4077 50  0000 C CNN
+F 2 "" H 8250 4250 50  0001 C CNN
+F 3 "" H 8250 4250 50  0001 C CNN
+	1    8250 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8150 3800 8800 3800
+Connection ~ 8150 3800
+Wire Wire Line
+	8150 3800 8150 3850
+Wire Wire Line
+	9100 3500 9100 3350
+$Comp
+L power:+BATT #PWR?
+U 1 1 5E82739A
+P 9100 3350
+F 0 "#PWR?" H 9100 3200 50  0001 C CNN
+F 1 "+BATT" H 9115 3523 50  0000 C CNN
+F 2 "" H 9100 3350 50  0001 C CNN
+F 3 "" H 9100 3350 50  0001 C CNN
+	1    9100 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9100 3900 9100 4150
+Wire Wire Line
+	9100 4150 9350 4150
+$Comp
+L power:VCC #PWR?
+U 1 1 5E829323
+P 9650 4150
+F 0 "#PWR?" H 9650 4000 50  0001 C CNN
+F 1 "VCC" H 9667 4323 50  0000 C CNN
+F 2 "" H 9650 4150 50  0001 C CNN
+F 3 "" H 9650 4150 50  0001 C CNN
+	1    9650 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG?
+U 1 1 5E8299C8
+P 9350 4150
+F 0 "#FLG?" H 9350 4225 50  0001 C CNN
+F 1 "PWR_FLAG" H 9350 4323 50  0000 C CNN
+F 2 "" H 9350 4150 50  0001 C CNN
+F 3 "~" H 9350 4150 50  0001 C CNN
+	1    9350 4150
+	1    0    0    -1  
+$EndComp
+Connection ~ 9350 4150
+Wire Wire Line
+	9350 4150 9650 4150
+$Comp
+L power:+BATT #PWR?
+U 1 1 5E82E8F5
+P 8150 3450
+F 0 "#PWR?" H 8150 3300 50  0001 C CNN
+F 1 "+BATT" H 8165 3623 50  0000 C CNN
+F 2 "" H 8150 3450 50  0001 C CNN
+F 3 "" H 8150 3450 50  0001 C CNN
+	1    8150 3450
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC

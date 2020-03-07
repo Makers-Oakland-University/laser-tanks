@@ -2,8 +2,8 @@
 #define ZUMO_H
 
 
-#define FLIP_LEFT   false
-#define FLIP_RIGHT  false
+#define FLIP_LEFT   true
+#define FLIP_RIGHT  true
 
 // Yellow - 0, 1
 // Blue - 1, 1
